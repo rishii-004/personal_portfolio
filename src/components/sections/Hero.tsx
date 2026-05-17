@@ -68,9 +68,9 @@ export function Hero() {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-lg border border-zinc-200/60 bg-zinc-50/50 px-3 py-1.5 text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 transition-colors duration-200 dark:border-zinc-800/60 dark:bg-zinc-950/50 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-zinc-100"
+          className="inline-flex items-center gap-1.5 rounded-lg border border-orange-500/20 bg-orange-500/10 px-3 py-1.5 text-sm font-medium text-orange-600 transition-colors duration-200 hover:bg-orange-500/20 dark:border-orange-500/20 dark:bg-orange-500/10 dark:text-orange-400 dark:hover:bg-orange-500/20"
         >
-          <FileText className="h-4 w-4 stroke-[1.5]" />
+          <FileText className="h-4 w-4 stroke-[2]" />
           Download Resume
         </a>
       </motion.div>
