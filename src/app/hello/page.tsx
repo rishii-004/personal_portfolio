@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowLeft, Send, Sparkles, MapPin, Check } from 'lucide-react'
+import { ArrowLeft, Send, Sparkles, MapPin, Check, Github, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
 
 type Vibe = 'hiring' | 'curiosity' | 'referred' | 'vibing'
@@ -89,11 +89,24 @@ export default function HelloPage() {
           Welcome from {location}
         </span>
         <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-4xl">
-          Hello, stranger.
+          Let's connect.
         </h1>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+        <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-lg">
           Select why you are visiting, type your name, and send a customized high-fidelity digital postcard!
         </p>
+
+        {/* Social Links */}
+        <div className="mt-4 flex gap-4">
+          <a href="https://github.com/rishii-004" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-full border border-zinc-200/60 bg-zinc-50/50 p-2.5 text-zinc-700 transition-colors hover:bg-zinc-200 hover:text-black dark:border-zinc-800/60 dark:bg-zinc-950/50 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white shadow-sm backdrop-blur-md">
+            <Github className="h-5 w-5 stroke-[1.5]" />
+          </a>
+          <a href="https://linkedin.com/in/dineshkumarsenapati/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-full border border-zinc-200/60 bg-zinc-50/50 p-2.5 text-[#0A66C2] transition-colors hover:border-[#0A66C2]/30 hover:bg-[#0A66C2]/10 dark:border-zinc-800/60 dark:bg-zinc-950/50 dark:text-[#4facff] dark:hover:border-[#4facff]/30 dark:hover:bg-[#4facff]/10 shadow-sm backdrop-blur-md">
+            <Linkedin className="h-5 w-5 stroke-[1.5]" />
+          </a>
+          <a href="mailto:rishikesh.inno@gmail.com" className="flex items-center justify-center rounded-full border border-zinc-200/60 bg-zinc-50/50 p-2.5 text-rose-500 transition-colors hover:border-rose-500/30 hover:bg-rose-500/10 dark:border-zinc-800/60 dark:bg-zinc-950/50 dark:text-rose-400 dark:hover:border-rose-400/30 dark:hover:bg-rose-400/10 shadow-sm backdrop-blur-md">
+            <Mail className="h-5 w-5 stroke-[1.5]" />
+          </a>
+        </div>
       </div>
 
       {/* Choice Pills */}
