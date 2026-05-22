@@ -1,51 +1,19 @@
 'use client'
 
 import * as React from 'react'
-import { motion } from 'framer-motion'
-import { ArrowLeft, Play, Sparkles, Code, Cpu } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
-
-interface Experiment {
-  id: string
-  title: string
-  description: string
-  date: string
-  tech: string[]
-  icon: typeof Sparkles
-  status: 'functional' | 'concept' | 'archived'
-}
-
-const experiments: Experiment[] = [
-  {
-    id: 'exp-1',
-    title: 'Checkout OS Simulation',
-    description: 'An interactive simulator testing high-throughput payment checkouts, mocking card validation and 3DS authorization steps.',
-    date: 'Feb 2025',
-    tech: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
-    icon: Cpu,
-    status: 'functional'
-  },
-  {
-    id: 'exp-2',
-    title: 'AI Figma Token Pipeline',
-    description: 'Generates tailwind-compatible theme CSS styles directly from visual design layer properties with code extraction.',
-    date: 'Dec 2024',
-    tech: ['Figma API', 'OpenAI API', 'NodeJS'],
-    icon: Code,
-    status: 'concept'
-  },
-  {
-    id: 'exp-3',
-    title: 'Fluid Money Visualizer',
-    description: 'A responsive visualizer mapping localized transaction volumes and latency across network nodes.',
-    date: 'Oct 2024',
-    tech: ['React', 'D3.js', 'Canvas API'],
-    icon: Cpu,
-    status: 'functional'
-  }
-]
+import { projects } from '@/lib/data/projects'
+import { Project } from '@/types'
+import { ProjectCard, ProjectModal } from '@/components/ui/ProjectCard'
 
 export default function PlaygroundPage() {
+  const [selectedProject, setSelectedProject] = React.useState<Project | null>(null)
+
+  const seriousProjects = projects.filter(p => p.category === 'serious')
+  const learningProjects = projects.filter(p => p.category === 'learning')
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -53,7 +21,6 @@ export default function PlaygroundPage() {
       transition={{ duration: 0.5 }}
       className="w-full max-w-2xl pt-10 pb-16"
     >
-      {/* Back button */}
       <Link
         href="/"
         className="group inline-flex items-center gap-1.5 text-sm text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors mb-8"
@@ -66,66 +33,56 @@ export default function PlaygroundPage() {
         Playground
       </h1>
       <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-        A sandbox for small frontend tools, research demos, and design system experiments.
+        A sandbox for my backend infrastructure tests, machine learning pipelines, and smaller UI experiments.
       </p>
 
-      {/* Grid of Experiments */}
-      <div className="mt-10 flex flex-col gap-6">
-        {experiments.map((exp, index) => {
-          const Icon = exp.icon
-          
-          return (
+      {/* Serious Projects Section */}
+      <div className="mt-12">
+        <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-6 border-b border-zinc-200/40 dark:border-zinc-800/40 pb-3">
+          Flagship Projects
+        </h2>
+        <div className="flex flex-col gap-4">
+          {seriousProjects.map((project, index) => (
             <motion.div
-              key={exp.id}
+              key={project.id}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative rounded-2xl border border-zinc-200/60 bg-zinc-50/50 p-6 transition-all duration-300 hover:border-zinc-300 hover:bg-zinc-100/60 dark:border-zinc-800/60 dark:bg-zinc-950/50 dark:hover:border-zinc-700 dark:hover:bg-zinc-900/60"
             >
-              <div className="flex items-center justify-between text-xs font-mono text-zinc-400 dark:text-zinc-500">
-                <span>{exp.date}</span>
-                <span className="inline-flex items-center gap-1">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                  {exp.status}
-                </span>
-              </div>
-
-              <div className="mt-4 flex items-start gap-4">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-zinc-200/40 text-zinc-600 dark:bg-zinc-900/50 dark:text-zinc-400 group-hover:bg-orange-500/10 group-hover:text-orange-500 transition-colors duration-300">
-                  <Icon className="h-5 w-5 stroke-[1.5]" />
-                </span>
-                
-                <div>
-                  <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors">
-                    {exp.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
-                    {exp.description}
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-6 flex items-center justify-between pt-4 border-t border-zinc-200/40 dark:border-zinc-900/40">
-                <div className="flex flex-wrap gap-1">
-                  {exp.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded bg-zinc-200/30 px-1.5 py-0.5 text-[10px] font-mono text-zinc-500 dark:bg-zinc-900/30 dark:text-zinc-400"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-                
-                <button className="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-700 hover:text-zinc-950 dark:text-zinc-300 dark:hover:text-zinc-50">
-                  <Play className="h-3 w-3 fill-current" />
-                  Launch Sandbox
-                </button>
-              </div>
+              <ProjectCard project={project} onOpenModal={setSelectedProject} />
             </motion.div>
-          )
-        })}
+          ))}
+        </div>
       </div>
+
+      {/* Learning & Small Projects Section */}
+      <div className="mt-14">
+        <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-6 border-b border-zinc-200/40 dark:border-zinc-800/40 pb-3">
+          Experiments & Mini-Projects
+        </h2>
+        <div className="flex flex-col gap-4">
+          {learningProjects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <ProjectCard project={project} onOpenModal={setSelectedProject} />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Dynamic Overlay Dialog with backdrop scroll locks */}
+      <AnimatePresence>
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
+      </AnimatePresence>
 
     </motion.div>
   )
