@@ -105,25 +105,7 @@ export default function HelloPage() {
       </div>
 
       <div className="mt-8 flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-        <div className="w-full lg:w-auto lg:min-w-[200px] lg:sticky lg:top-24 shrink-0">
-          <div className="flex flex-col gap-2">
-            {vibeOptions.map((option) => (
-              <button
-                key={option.key}
-                onClick={() => setSelectedVibe(option.key)}
-                className={`flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium border transition-all duration-300 ${
-                  selectedVibe === option.key
-                    ? 'border-zinc-900 bg-zinc-950 text-zinc-50 dark:border-zinc-50 dark:bg-zinc-50 dark:text-zinc-950'
-                    : 'border-zinc-200 bg-transparent text-zinc-600 hover:border-zinc-300 hover:text-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-100'
-                }`}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex-1 flex justify-center lg:justify-end">
+        <div className="flex-1 flex justify-center lg:justify-start">
         <motion.div
           animate={stamped ? { rotateZ: [0, 0.5, -0.5, 0], scale: [1, 1.01, 0.99, 1] } : {}}
           transition={{ duration: 0.8 }}
@@ -250,6 +232,24 @@ export default function HelloPage() {
           </div>
         </motion.div>
       </div>
+
+        <div className="w-full lg:w-auto lg:min-w-[200px] lg:sticky lg:top-24 shrink-0">
+          <div className="flex flex-col gap-2">
+            {vibeOptions.map((option) => (
+              <button
+                key={option.key}
+                onClick={() => setSelectedVibe(option.key)}
+                className={`flex items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium border transition-all duration-300 ${
+                  selectedVibe === option.key
+                    ? 'border-zinc-900 bg-zinc-950 text-zinc-50 dark:border-zinc-50 dark:bg-zinc-50 dark:text-zinc-950'
+                    : 'border-zinc-200 bg-transparent text-zinc-600 hover:border-zinc-300 hover:text-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-zinc-100'
+                }`}
+              >
+                {option.label}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
     </motion.div>
