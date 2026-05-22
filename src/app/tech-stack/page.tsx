@@ -93,7 +93,7 @@ export default function TechStackPage() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="flex flex-col gap-5"
           >
-            <h3 className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 border-b border-zinc-200/50 dark:border-zinc-800/50 pb-2">
+            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 border-b border-zinc-200/40 dark:border-zinc-800/40 pb-2 text-right">
               {category.title}
             </h3>
             {/* Side-by-side columns grid */}

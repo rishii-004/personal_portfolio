@@ -52,7 +52,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-8 flex flex-wrap items-center gap-4 text-sm"
+        className="mt-8 flex flex-wrap items-center justify-end gap-4 text-sm"
       >
         <Link
           href="/about"

@@ -17,7 +17,7 @@ export function ExperienceTimeline() {
         transition={{ duration: 0.5 }}
         className="border-b border-zinc-200/40 pb-3 dark:border-zinc-800/40"
       >
-        <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
+        <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 text-right">
           Experience History
         </h2>
       </motion.div>
