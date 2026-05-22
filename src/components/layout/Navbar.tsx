@@ -55,7 +55,7 @@ export function Navbar() {
           opacity: { duration: 0.4 },
           x: { duration: 0.4 }
         }}
-        className="fixed right-6 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-end gap-3 overflow-hidden rounded-2xl border border-zinc-200/50 bg-zinc-50/40 p-3 shadow-lg shadow-zinc-200/20 backdrop-blur-md transition-colors duration-300 dark:border-zinc-800/50 dark:bg-zinc-950/40 dark:shadow-black/40 md:flex"
+        className="fixed right-6 top-1/2 z-50 hidden -translate-y-1/2 flex-col items-end gap-3 overflow-hidden rounded-2xl border border-zinc-200/50 bg-zinc-50/40 hover:bg-zinc-200/60 p-3 shadow-lg shadow-zinc-200/20 backdrop-blur-md transition-colors duration-300 dark:border-zinc-800/50 dark:bg-zinc-950/40 dark:hover:bg-zinc-800/60 dark:shadow-black/40 md:flex"
       >
         
         {/* Profile Avatar & Name */}
@@ -165,7 +165,7 @@ export function Navbar() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-zinc-200/60 bg-zinc-50/50 px-3 py-2.5 shadow-xl shadow-zinc-200/30 backdrop-blur-md transition-colors duration-300 dark:border-zinc-800/60 dark:bg-zinc-950/50 dark:shadow-black/50 md:hidden"
+        className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-zinc-200/60 bg-zinc-50/50 hover:bg-zinc-200/60 px-3 py-2.5 shadow-xl shadow-zinc-200/30 backdrop-blur-md transition-colors duration-300 dark:border-zinc-800/60 dark:bg-zinc-950/50 dark:hover:bg-zinc-800/60 dark:shadow-black/50 md:hidden"
       >
         {navItems.map((item) => {
           const isActive = pathname === item.href
