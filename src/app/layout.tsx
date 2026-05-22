@@ -39,11 +39,18 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="relative flex min-h-screen flex-col overflow-x-hidden">
+            {/* Very subtle ambient background glow */}
+            <div className="fixed top-0 left-0 -z-10 h-full w-full pointer-events-none">
+              <div className="absolute top-[10%] left-[-10%] h-[800px] w-[800px] rounded-full bg-orange-500/5 blur-[120px] dark:bg-orange-400/5" />
+            </div>
+
             <Navbar />
-            <main className="flex-grow flex flex-col justify-start px-6 md:pl-28 md:pr-10 py-16">
-              {children}
-            </main>
-            <Footer />
+            <div className="flex-grow flex flex-col w-full md:pl-[14vw]">
+              <main className="flex-grow flex flex-col justify-start px-6 py-16">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </div>
         </ThemeProvider>
       </body>

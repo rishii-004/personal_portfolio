@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowLeft, ArrowUpRight } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
 
 const blurParagraphs = [
@@ -18,7 +18,7 @@ export default function AboutPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="mx-auto w-full max-w-2xl pt-10 pb-16"
+      className="w-full max-w-2xl pt-10 pb-16"
     >
       {/* Back button */}
       <Link
@@ -48,39 +48,6 @@ export default function AboutPage() {
           </motion.p>
         ))}
       </div>
-
-      {/* Additional link section */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="mt-12 pt-8 border-t border-zinc-200/40 dark:border-zinc-800/40"
-      >
-        <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">
-          Connect / Links
-        </h3>
-        
-        <div className="mt-4 flex flex-col gap-3 text-sm text-zinc-600 dark:text-zinc-400">
-          <Link
-            href="/hello"
-            className="group flex items-center justify-between rounded-xl border border-zinc-200/60 bg-zinc-50/50 p-4 transition-colors hover:bg-zinc-100 dark:border-zinc-800/60 dark:bg-zinc-950/50 dark:hover:bg-zinc-900"
-          >
-            <span>Before you go — here's a postcard for you</span>
-            <ArrowUpRight className="h-4 w-4 stroke-[1.5] text-zinc-400 group-hover:text-zinc-950 dark:group-hover:text-zinc-100 transition-colors" />
-          </Link>
-          
-          <a
-            href="mailto:rishikesh.inno@gmail.com"
-            className="flex items-center justify-between rounded-xl border border-zinc-200/40 bg-transparent p-4 transition-colors hover:bg-zinc-100/50 dark:border-zinc-800/20 dark:hover:bg-zinc-900/40"
-          >
-            <span>Get in touch via Email</span>
-            <span className="text-xs font-mono text-zinc-400 dark:text-zinc-500 hover:underline">
-              rishikesh.inno@gmail.com
-            </span>
-          </a>
-        </div>
-      </motion.div>
 
     </motion.div>
   )

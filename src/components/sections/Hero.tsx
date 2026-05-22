@@ -7,7 +7,7 @@ import { ArrowRight, FileText } from 'lucide-react'
 
 export function Hero() {
   return (
-    <section className="mx-auto w-full max-w-2xl pt-10 pb-16">
+    <section className="w-full max-w-2xl pt-10 pb-16">
       
       {/* Title / Name reveal */}
       <motion.div
