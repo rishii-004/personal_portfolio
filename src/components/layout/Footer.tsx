@@ -9,7 +9,7 @@ export function Footer() {
 
   return (
     <footer className="mt-auto w-full border-t border-zinc-200/50 bg-zinc-50/20 py-10 transition-colors duration-300 dark:border-zinc-800/30 dark:bg-zinc-950/20">
-      <div className="mx-auto flex max-w-2xl flex-col items-center justify-between gap-6 px-6 text-zinc-500 sm:flex-row sm:gap-0 text-sm">
+      <div className="flex max-w-2xl flex-col items-center justify-between gap-6 px-6 text-zinc-500 sm:flex-row sm:gap-0 text-sm">
         
         {/* Left Side: Copyright & Version */}
         <div className="flex flex-col items-center gap-1 sm:items-start">

@@ -47,7 +47,7 @@ export default function WritingPage() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="mx-auto w-full max-w-2xl pt-10 pb-16"
+      className="w-full max-w-2xl pt-10 pb-16"
     >
       {/* Back button */}
       <Link

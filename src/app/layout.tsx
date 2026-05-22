@@ -40,10 +40,12 @@ export default function RootLayout({
         >
           <div className="relative flex min-h-screen flex-col overflow-x-hidden">
             <Navbar />
-            <main className="flex-grow flex flex-col justify-start px-6 md:pl-28 md:pr-10 py-16">
-              {children}
-            </main>
-            <Footer />
+            <div className="flex-grow flex flex-col w-full md:pl-[14vw]">
+              <main className="flex-grow flex flex-col justify-start px-6 py-16">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </div>
         </ThemeProvider>
       </body>

@@ -11,7 +11,7 @@ export function Projects() {
 
   const caseStudies = projects.filter((p) => p.category === 'case-study')
   return (
-    <section id="projects" className="mx-auto w-full max-w-2xl py-12">
+    <section id="projects" className="w-full max-w-2xl py-12">
       
       {/* Case Studies Header */}
       <motion.div

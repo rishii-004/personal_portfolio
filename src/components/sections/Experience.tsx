@@ -7,7 +7,7 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react'
 
 export function ExperienceTimeline() {
   return (
-    <section id="experience" className="mx-auto w-full max-w-2xl py-12">
+    <section id="experience" className="w-full max-w-2xl py-12">
       
       {/* Experience Header */}
       <motion.div
