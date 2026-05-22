@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes'
 import { 
   Home, 
   User, 
-  PenTool, 
+  Layers, 
   LayoutGrid, 
   Hand, 
   Sun, 
@@ -28,7 +28,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: 'Home', href: '/', icon: Home, colorClass: 'text-blue-500 dark:text-blue-400', hoverBgClass: 'hover:bg-blue-500/10' },
   { label: 'About', href: '/about', icon: User, colorClass: 'text-emerald-500 dark:text-emerald-400', hoverBgClass: 'hover:bg-emerald-500/10' },
-  { label: 'Writing', href: '/writing', icon: PenTool, colorClass: 'text-purple-500 dark:text-purple-400', hoverBgClass: 'hover:bg-purple-500/10' },
+  { label: 'Tech Stack', href: '/tech-stack', icon: Layers, colorClass: 'text-purple-500 dark:text-purple-400', hoverBgClass: 'hover:bg-purple-500/10' },
   { label: 'Playground', href: '/playground', icon: LayoutGrid, colorClass: 'text-amber-500 dark:text-amber-400', hoverBgClass: 'hover:bg-amber-500/10' },
   { label: 'Connect', href: '/hello', icon: Hand, colorClass: 'text-rose-500 dark:text-rose-400', hoverBgClass: 'hover:bg-rose-500/10' },
 ]

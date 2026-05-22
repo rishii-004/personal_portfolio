@@ -12,9 +12,9 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, onOpenModal }: ProjectCardProps) {
-  const isCaseStudy = project.category === 'case-study'
+  const isExpandable = project.category !== 'additional'
 
-  if (isCaseStudy && onOpenModal) {
+  if (isExpandable && onOpenModal) {
     return (
       <motion.button
         onClick={() => onOpenModal(project)}

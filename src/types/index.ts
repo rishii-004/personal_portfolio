@@ -8,7 +8,7 @@ export interface Project {
   githubUrl?: string
   imageUrl?: string
   featured?: boolean
-  category: 'case-study' | 'additional'
+  category: 'case-study' | 'serious' | 'learning' | 'additional'
   year: string
   association?: string
 }
