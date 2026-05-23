@@ -21,7 +21,7 @@ export function Projects() {
         transition={{ duration: 0.5 }}
         className="border-b border-zinc-200/40 pb-3 dark:border-zinc-800/40"
       >
-        <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 text-right">
+        <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-right bg-gradient-to-l from-sky-500 via-zinc-400 to-zinc-400 bg-clip-text text-transparent dark:from-amber-300 dark:via-zinc-500 dark:to-zinc-500">
           Case Studies
         </h2>
       </motion.div>
