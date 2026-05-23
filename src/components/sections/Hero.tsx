@@ -68,10 +68,13 @@ export function Hero() {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-1 py-1.5 text-sm font-medium text-red-600 transition-colors duration-200 hover:text-red-500 dark:text-amber-300 dark:hover:text-amber-200"
+          className="group inline-flex items-center gap-1.5 px-1 py-1.5 text-sm font-medium text-red-600 transition-colors duration-200 hover:text-red-500 dark:text-amber-300 dark:hover:text-amber-200"
         >
-          <FileText className="h-4 w-4 stroke-[1.5]" />
-          Download Resume
+          <FileText className="h-4 w-4 stroke-[1.5] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110" />
+          <span className="relative">
+            Download Resume
+            <span className="absolute -bottom-0.5 left-0 h-px w-0 bg-current transition-all duration-300 group-hover:w-full" />
+          </span>
         </a>
       </motion.div>
 
