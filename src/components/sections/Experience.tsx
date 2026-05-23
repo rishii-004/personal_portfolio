@@ -17,7 +17,7 @@ export function ExperienceTimeline() {
         transition={{ duration: 0.5 }}
         className="border-b border-zinc-200/40 pb-3 dark:border-zinc-800/40"
       >
-        <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-right bg-gradient-to-l from-sky-500 via-zinc-400 to-zinc-400 bg-clip-text text-transparent dark:from-amber-300 dark:via-zinc-500 dark:to-zinc-500">
+        <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-right bg-gradient-to-l from-red-500 via-zinc-400 to-zinc-400 bg-clip-text text-transparent dark:from-amber-300 dark:via-zinc-500 dark:to-zinc-500">
           Experience History
         </h2>
       </motion.div>
@@ -34,8 +34,8 @@ export function ExperienceTimeline() {
             className="relative pl-7 group"
           >
             {/* Timeline Bullet node */}
-            <span className="absolute left-0 top-1.5 -translate-x-1/2 flex h-7 w-7 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors duration-300 group-hover:border-sky-500 dark:border-zinc-800 dark:bg-zinc-950 dark:group-hover:border-amber-300">
-              <Briefcase className="h-3 w-3 text-zinc-400 dark:text-zinc-500 group-hover:text-sky-500 dark:group-hover:text-amber-300 transition-colors" />
+            <span className="absolute left-0 top-1.5 -translate-x-1/2 flex h-7 w-7 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-colors duration-300 group-hover:border-red-500 dark:border-zinc-800 dark:bg-zinc-950 dark:group-hover:border-amber-300">
+              <Briefcase className="h-3 w-3 text-zinc-400 dark:text-zinc-500 group-hover:text-red-500 dark:group-hover:text-amber-300 transition-colors" />
             </span>
 
             {/* Content Container */}

@@ -36,7 +36,7 @@ export function Hero() {
           </span>{' '}
           I ship robust 0-1 web platforms, architect pixel-perfect design systems, and craft performant user experiences. 
           Currently obsessed with building interactive dashboards and exploring what{' '}
-          <span className="rounded-md border border-sky-500/15 bg-sky-500/10 px-1.5 py-0.5 font-mono text-xs font-medium text-sky-600 dark:border-amber-400/15 dark:bg-amber-400/10 dark:text-amber-300">
+          <span className="rounded-md border border-red-500/15 bg-red-500/10 px-1.5 py-0.5 font-mono text-xs font-medium text-red-600 dark:border-amber-400/15 dark:bg-amber-400/10 dark:text-amber-300">
             AI + UI engineering
           </span>{' '}
           can achieve.
@@ -68,7 +68,7 @@ export function Hero() {
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-1 py-1.5 text-sm font-medium text-sky-600 transition-colors duration-200 hover:text-sky-500 dark:text-amber-300 dark:hover:text-amber-200"
+          className="inline-flex items-center gap-1.5 px-1 py-1.5 text-sm font-medium text-red-600 transition-colors duration-200 hover:text-red-500 dark:text-amber-300 dark:hover:text-amber-200"
         >
           <FileText className="h-4 w-4 stroke-[1.5]" />
           Download Resume
