@@ -31,7 +31,7 @@ export function ProjectCard({ project, onOpenModal }: ProjectCardProps) {
           )}
         </div>
         
-        <h3 className="mt-3 text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 group-hover:text-orange-500 dark:group-hover:text-orange-400 transition-colors duration-200">
+        <h3 className="mt-3 text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-50 group-hover:text-red-600 dark:group-hover:text-amber-300 transition-colors duration-200">
           {project.title}
         </h3>
         

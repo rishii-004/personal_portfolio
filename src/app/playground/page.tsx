@@ -38,7 +38,7 @@ export default function PlaygroundPage() {
 
       {/* Serious Projects Section */}
       <div className="mt-12">
-        <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-6 border-b border-zinc-200/40 dark:border-zinc-800/40 pb-3 text-right">
+        <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-right mb-6 border-b border-zinc-200/40 dark:border-zinc-800/40 pb-3 bg-gradient-to-l from-red-500 via-zinc-400 to-zinc-400 bg-clip-text text-transparent dark:from-amber-300 dark:via-zinc-500 dark:to-zinc-500">
           Flagship Projects
         </h2>
         <div className="flex flex-col gap-4">
@@ -57,7 +57,7 @@ export default function PlaygroundPage() {
 
       {/* Learning & Small Projects Section */}
       <div className="mt-14">
-        <h2 className="text-sm font-mono font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500 mb-6 border-b border-zinc-200/40 dark:border-zinc-800/40 pb-3 text-right">
+        <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-right mb-6 border-b border-zinc-200/40 dark:border-zinc-800/40 pb-3 bg-gradient-to-l from-red-500 via-zinc-400 to-zinc-400 bg-clip-text text-transparent dark:from-amber-300 dark:via-zinc-500 dark:to-zinc-500">
           Experiments & Mini-Projects
         </h2>
         <div className="flex flex-col gap-4">
